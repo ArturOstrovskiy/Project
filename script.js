@@ -36,14 +36,13 @@ const view = {
 
 		for (const note of notes) {
 			notesHTML += `
-        <li id="${note.id}" class="movie">
+        <div id="${note.id}" class="movie">
           <b class="note-title">${note.name}</b>
           <p class="note-description">${note.value}</p>
           <button class="delete-button" type="button">Удалить 🗑</button>
-        </li>
+        </div>
       `
 		}
-
 		notesBlock.innerHTML = notesHTML
 	},
 

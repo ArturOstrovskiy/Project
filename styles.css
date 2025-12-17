@@ -113,3 +113,7 @@ display: flex;
   z-index: 1;
 }
 
+/*.notes-block:has(div) .background{*/
+/*  display: none;*/
+/*}*/
+/*не работатет*/
