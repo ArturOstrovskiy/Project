@@ -1,10 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Кодировка символов-->
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <!-- Масштабирование и правильное отображение страницы-->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+  <!--  Шрифт-->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+    rel="stylesheet"
+  >
+  <!-- Привязал CSS-->
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+  <title>Notes</title>
 </head>
 <body>
-$END$
+<header class="header">
+  <!--  Логотип-->
+  <a
+    href="/"
+    class="logo"
+  >
+    <img
+      src="images/📝notes_logo.svg"
+      alt="Логотип"
+    >
+  </a>
+  <!--  Картинка заметок-->
+  <div class="counter">
+    <img
+      src="images/notes_mini.svg"
+      alt="Картинка заметок"
+    >
+    <p>
+      Всего заметок: x
+    </p>
+  </div>
+
+</header>
+<!-- Секция с задним планом-->
+<section class="background">
+  <p class="background-text">
+    У вас нет еще ни одной заметки<br>
+    Заполните поля выше и создайте свою первую заметку!
+  </p>
+</section>
+<!--  Секция с формами-->
+<section class="main">
+  <!--    Форма с названием заметки-->
+  <form
+    action=""
+    class="form-name-block"
+  >
+    <label
+      for="name-notes"
+      class="label"
+    >Название заметки
+    </label>
+    <input
+      class="input-area"
+      type="text"
+      name="name"
+      id="name-notes"
+      placeholder="Напишите название новой заметки..."
+      required
+    />
+  </form>
+  <!--    Форма с описанием заметки-->
+  <div class="value-block">
+    <form
+      action=""
+      class="form-value-block"
+    >
+      <label
+        for="value-notes"
+        class="label"
+      >Описание новой заметки
+      </label>
+      <input
+        class="input-area"
+        type="text"
+        name="name"
+        id="value-notes"
+        placeholder="Напишите описание новой заметки..."
+        required
+      />
+    </form>
+    <!--        Блок с цветом заметок и кнопкой-->
+    <div class="notes-color-block">
+      <p>Выберите цвет заметки</p>
+      <!--        Выбор цвета заметок-->
+      <div class="notes-color">
+
+        <div class="border-img">
+          <img
+            src="images/yellow_circle.svg"
+            alt=""
+          >
+        </div>
+        <div class="border-img">
+          <img
+            src="images/green_circle.svg"
+            alt=""
+          >
+        </div>
+        <div class="border-img">
+          <img
+            src="images/blue_circle.svg"
+            alt=""
+          >
+        </div>
+        <div class="border-img">
+          <img
+            src="images/red_circle.svg"
+            alt=""
+          >
+        </div>
+        <div class="border-img">
+          <img
+            src="images/purple_circle.svg"
+            alt=""
+          >
+        </div>
+      </div>
+      <!--          Кнопка "+ Добавить заметку"-->
+      <input
+        type="button"
+        class="add-button"
+        value="+ Добавить заметку"
+      >
+    </div>
+  </div>
+
+</section>
 </body>
 </html>
