@@ -42,11 +42,11 @@ position: fixed;
 }
 
 .main{
-  border: 1px solid #a6a1a1;
   border-radius: 4px;
+  box-shadow: 8px 16px 20px 0 #0b0c0d29;
   display: flex;
   flex-direction: column;
-  margin: 0 64px;
+  margin: 0 64px 60px;
   padding: 24px;
   gap: 12px;
   font-family: "Montserrat", sans-serif;
@@ -67,12 +67,12 @@ display: flex;
   font-size: 12px;
 }
 
-.value-block{
+.description-block{
   display: flex;
   justify-content: space-between;
   gap: 24px;
 }
-.form-value-block{
+.form-description-block{
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -87,6 +87,9 @@ display: flex;
   font-size: 14px;
 
 }
+/*#yellow{*/
+/*  background-color: #F3DB7D;*/
+/*}*/
 .notes-color{
   display: flex;
   justify-content: center;
@@ -107,13 +110,52 @@ display: flex;
 }
 .notes-block{
   display: flex;
+  flex-wrap: wrap;
   margin: 0 64px;
   gap: 20px;
   position: relative;
   z-index: 1;
 }
+.note{
+  box-shadow: 8px 16px 20px 0 #0b0c0d29;
+  min-width: 453px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.icons{
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.img-icons{
+  display: block;
+}
 
-/*.notes-block:has(div) .background{*/
-/*  display: none;*/
-/*}*/
-/*не работатет*/
+.note-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  /*background-color: #F3DB7D;*/
+  font-size: 16px;
+}
+.note-description{
+  font-size: 14px;
+  padding: 12px 0 12px 12px;
+}
+
+.fav-button{
+  border: none;
+  /*background-color: #F3DB7D;*/
+}
+.del-button{
+  border: none;
+  /*background-color: #F3DB7D;*/
+}
+
+/* Ищем родителя body:, внутри которого есть notes-block с контентом,
+   и внутри этого родителя скрываем .background если условие (.notes-block div) истинно*/
+body:has(.notes-block div) .background {
+  display: none;
+}
+
