@@ -51,8 +51,7 @@
       src="images/notes_mini.svg"
       alt="Картинка заметок"
     >
-    <p>
-      Всего заметок: x
+    <p class="notes-count">
     </p>
   </div>
 
@@ -110,46 +109,68 @@
       <p>Выберите цвет заметки</p>
       <!--        Выбор цвета заметок-->
       <div class="notes-color">
+        <label for="yellow" class="border-img">
+          <input type="radio" id="yellow" name="color" value="#F3DB7D"  checked/>
+          <img
+          src="images/yellow_circle.svg"
+          alt="yellow_circle"
+        ></label>
 
-        <div class="border-img yellow" id="yellow">
+        <label for="green" class="border-img">
+          <input type="radio" id="green" name="color" value="#C2F37D" />
           <img
-            src="images/yellow_circle.svg"
-            alt="yellow_circle"
-          >
-        </div>
-        <div class="border-img green" id="green">
+          src="images/green_circle.svg"
+          alt="green_circle"
+        ></label>
+
+        <label for="blue" class="border-img">
+          <input type="radio" id="blue" name="color" value="#7DE1F3" />
           <img
-            src="images/green_circle.svg"
-            alt="green_circle"
-          >
-        </div>
-        <div class="border-img blue" id="blue">
+          src="images/blue_circle.svg"
+          alt="blue_circle"
+        ></label>
+
+        <label for="red" class="border-img">
+          <input type="radio" id="red" name="color" value="#F37D7D" />
           <img
-            src="images/blue_circle.svg"
-            alt="blue_circle"
-          >
-        </div>
-        <div class="border-img red" id="red">
+          src="images/red_circle.svg"
+          alt="red_circle"
+        ></label>
+
+        <label for="purple" class="border-img">
+          <input type="radio" id="purple" name="color" value="#E77DF3" />
           <img
-            src="images/red_circle.svg"
-            alt="red_circle"
-          >
-        </div>
-        <div class="border-img purple" id="purple">
-          <img
-            src="images/purple_circle.svg"
-            alt="purple_circle"
-          >
-        </div>
+          src="images/purple_circle.svg"
+          alt="purple_circle"
+        ></label>
+
       </div>
       <!--          Кнопка "+ Добавить заметку"-->
       <button type="button" class="add-button">+ Добавить заметку</button>
     </div>
   </div>
 </section>
+<!--секция избранного-->
+<section class="fav-notes">
+  <label class="checkbox-container">
+    <input type="checkbox" name="status" id="main-filter-check" class="status-input" />
+    <img class="status-icon" src="images/checkbox_inactive.svg" alt="icon">
+  </label>
+  Показать только избранные заметки
+</section>
+
+<!--секция, куда добавляются note-->
 <section class="notes-block">
 
 </section>
+
+<section  class="message-box" >
+    <img class="message-icon"
+         src=""
+         alt=""
+    >
+</section>
+
 <script src="script.js"></script>
 <!--<script src="testScript.js"></script>-->
 </body>

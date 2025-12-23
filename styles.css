@@ -23,11 +23,17 @@
   border-bottom: 1px solid #a6a1a1;
 }
 
+.logo{
+  display: flex;
+  align-items: center;
+}
+
 .counter{
   display: flex;
   gap: 16px;
   font-weight: 500;
 }
+
 
 .background{
 position: fixed;
@@ -46,7 +52,7 @@ position: fixed;
   box-shadow: 8px 16px 20px 0 #0b0c0d29;
   display: flex;
   flex-direction: column;
-  margin: 0 64px 60px;
+  margin: 0 64px 24px;
   padding: 24px;
   gap: 12px;
   font-family: "Montserrat", sans-serif;
@@ -80,6 +86,8 @@ display: flex;
 .input-area{
   padding: 6px 12px;
   font-size: 14px;
+  border: 1px solid #919191;
+  border-radius: 10px;
 }
 .notes-color-block{
   display: flex;
@@ -87,18 +95,32 @@ display: flex;
   font-size: 14px;
 
 }
-/*#yellow{*/
-/*  background-color: #F3DB7D;*/
-/*}*/
+
 .notes-color{
   display: flex;
   justify-content: center;
   gap: 8px;
+  margin: 0 0 12px;
+}
+
+input[type="radio"],
+input[type="checkbox"]  {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute; /* Убираем из потока, чтобы не мешал */
 }
 
 .border-img{
+  border: 3px solid #ffffff;
+  display: flex;
   padding: 6px;
+  border-radius: 50%;
+  box-sizing: border-box;
 }
+.border-img:has(input[type="radio"]:checked) {
+  border: 3px solid #457CDC;
+}
+
 .add-button{
   border-radius: 10px;
   border: none;
@@ -108,6 +130,21 @@ display: flex;
   font-size: 16px;
   color: #fff;
 }
+.fav-notes{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 64px 12px;
+  position: relative;
+  z-index: 1;
+}
+.checkbox-container{
+  display: flex;
+}
+/*.status-input:checked + .status-icon {*/
+/*  content: url("images/checkbox_active.svg"); !* Меняем файл при клике *!*/
+/*}*/
+
 .notes-block{
   display: flex;
   flex-wrap: wrap;
@@ -118,9 +155,14 @@ display: flex;
 }
 .note{
   box-shadow: 8px 16px 20px 0 #0b0c0d29;
-  min-width: 453px;
+  width: 32%;
   border-radius: 10px;
   overflow: hidden;
+  order: 2;
+}
+
+.note.favourite {
+  order: 1;
 }
 .icons{
   display: flex;
@@ -136,12 +178,11 @@ display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px;
-  /*background-color: #F3DB7D;*/
   font-size: 16px;
 }
 .note-description{
   font-size: 14px;
-  padding: 12px 0 12px 12px;
+  padding: 12px;
 }
 
 .fav-button{
@@ -158,4 +199,20 @@ display: flex;
 body:has(.notes-block div) .background {
   display: none;
 }
+.message-box{
+  position: absolute;
+  right: 64px;
+  bottom: 72px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+
+.message-box.hidden{
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+}
+
+
 
